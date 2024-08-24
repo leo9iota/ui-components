@@ -1,2 +1,4 @@
-# i-code-this
-Frontend exercises on icodethis.com
+# I Code This
+
+Frontend exercises on [icodethis.com](https://icodethis.com/)
+
