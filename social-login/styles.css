@@ -1,0 +1,118 @@
+:root {
+    --background-color: #dce4f8;
+    --linear-gradient-color-1: #5170de;
+    --linear-gradient-color-2: #1d3db4;
+    --primary-text-color: white;
+    --secondary-text-color: rgba(255, 255, 255, 0.75);
+    --input-background-color: rgba(255, 255, 255, 0.15);
+    --button-background-color: rgba(255, 255, 255, 0.25);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    background-color: var(--background-color);
+    border-radius: 22px;
+    width: 930px;
+    height: 330px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 300px;
+    border-radius: 15px;
+    background: linear-gradient(
+        45deg,
+        var(--linear-gradient-color-1),
+        var(--linear-gradient-color-2)
+    );
+    color: var(--primary-text-color);
+}
+
+.login-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.subtext {
+    font-size: 16px;
+    color: var(--secondary-text-color);
+    margin: 0;
+    margin-top: 10px;
+}
+
+.login-field {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.email-input {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    width: 300px;
+    background-color: var(--input-background-color);
+    color: white;
+    outline: none;
+}
+
+.login-button {
+    margin-left: 15px;
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--button-background-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.profile-row {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 4px solid white;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
