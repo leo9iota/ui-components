@@ -5,6 +5,11 @@
     --linear-gradient-color-2: #1134b0;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
 .login-container {
     display: flex;
     justify-content: center;
@@ -35,4 +40,31 @@
         var(--linear-gradient-color-1),
         var(--linear-gradient-color-2)
     );
+}
+
+.login-text > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: normal;
+    line-height: 1.2;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+.login-text > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
