@@ -94,14 +94,21 @@ body {
 }
 
 .input-wrapper button {
-    background: none;
+    background-color: var(--input-button-color); /* Circle background color */
     border: none;
-    padding: 10px;
+    margin-right: -10px;
+    width: 45px; /* Width of the circle */
+    height: 40px; /* Height of the circle */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    padding: 0;
 }
 
 .input-wrapper button img {
     width: 18px;
     height: 18px;
-    filter: invert(100%);
+    filter: invert(0); /* Optional: Adjust filter based on background color */
 }
