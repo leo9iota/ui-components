@@ -113,7 +113,7 @@ body {
 
 .input-wrapper button img {
     width: 20px;
-    height: 10px;
+    height: 20px;
     filter: invert(0); /* Optional: Adjust filter based on background color */
 }
 
