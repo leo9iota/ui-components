@@ -1,63 +1,97 @@
 body {
-	background-color: #f7fbfe;
-	margin: 0;
-	height: 100vh;
-	overflow: hidden;
-	position: relative;
+    background-color: #f0f4ff;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .circle {
-	position: absolute;
-	width: 100vw;
-	height: 100vw;
-	max-width: 700px;
-	max-height: 700px;
-	background-color: #ffffff;
-	border-radius: 50%;
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    max-width: 700px;
+    max-height: 700px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 10px white;
 }
 
 .top-right {
-	top: 0;
-	right: 0;
-	transform: translate(40%, -40%);
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
 }
 
 .bottom-left {
-	bottom: 0;
-	left: 0;
-	transform: translate(-40%, 40%);
+    bottom: 0;
+    left: 0;
+    transform: translate(-40%, 40%);
 }
 
 .container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); /* Centering box both horizontally and vertically */
-	width: 80%;
-	max-width: 400px;
-	max-height: 1200px;
-	background-color: #f0f0f0;
-	border-radius: 15px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering box both horizontally and vertically */
+    width: 80%;
+    max-width: 300px;
+    max-height: 1200px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 50px 15px #e1e9ff;
+    padding: 20px;
 }
+
+/* Font */
+.nokora-thin {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nokora-light {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nokora-regular {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nokora-bold {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nokora-black {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Responsive Design */
 
 /* Small screens (mobile devices) */
 @media only screen and (max-width: 768px) {
-	.rectangular-box {
-		width: 90%;
-		height: 30vh;
-		padding: 10px;
-		margin: 10px auto;
-	}
+    .rectangular-box {
+        width: 90%;
+        height: 30vh;
+        padding: 10px;
+        margin: 10px auto;
+    }
 }
 
 /* Large screens (desktop devices) */
 @media only screen and (min-width: 1200px) {
-	.rectangular-box {
-		width: 70%;
-		height: 50vh;
-		padding: 30px;
-		margin: 30px auto;
-	}
+    .rectangular-box {
+        width: 70%;
+        height: 50vh;
+        padding: 30px;
+        margin: 30px auto;
+    }
 }
