@@ -43,6 +43,29 @@ body {
     padding: 20px;
 }
 
+.container > div {
+    padding: 25px;
+}
+
+.menu-item {
+    display: flex; /* Define display flex */
+    align-items: center; /* Center flex items vertically */
+    justify-content: flex-start; /* Align flex items to left side */
+    padding: 15px 0;
+}
+
+.menu-item .icon {
+    width: 24px;
+    height: 24px;
+    color: #b7b7b7; /* Default icon color */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Optional: Add some styles for the text */
+.menu-item span {
+    font-size: 16px; /* Adjust text size as needed */
+}
+
 /* Font */
 .nokora-thin {
     font-family: 'Nokora', sans-serif;
