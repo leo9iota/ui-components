@@ -53,9 +53,31 @@ body {
 
 .menu-item {
     display: flex; /* Define display flex */
+    position: relative;
     align-items: center; /* Center flex items vertically */
     justify-content: flex-start; /* Align flex items to left side */
     padding: 15px 0;
+    padding-left: 10px; /* Add initial padding to the left */
+    transition: padding-left 0.3s; /* Smooth transition for padding */
+}
+
+.menu-item::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2374f8; /* Color of the rectangle bar */
+    transition: width 0.3s; /* Smooth transition for width */
+}
+
+.menu-item:hover {
+    padding-left: 15px; /* Increase padding on hover */
+}
+
+.menu-item:hover::before {
+    width: 5px; /* Width of the rectangle bar on hover */
 }
 
 .menu-item .icon {
@@ -71,10 +93,10 @@ body {
 
 /* Optional: Add some styles for the text */
 .menu-item span {
-    font-size: 16px; /* Adjust text size as needed */
+    font-size: 16px;
 }
 
-/* Font */
+/* ---------------- Font Weights ----------------  */
 .nokora-thin {
     font-family: 'Nokora', sans-serif;
     font-weight: 100;
@@ -105,7 +127,7 @@ body {
     font-style: normal;
 }
 
-/* Responsive Design */
+/* ---------------- Responsive Design ---------------- */
 
 /* Small screens (mobile devices) */
 @media only screen and (max-width: 768px) {
