@@ -47,6 +47,10 @@ body {
     padding: 25px;
 }
 
+.container > div:hover {
+    color: #2374f8; /* Text color on hover */
+}
+
 .menu-item {
     display: flex; /* Define display flex */
     align-items: center; /* Center flex items vertically */
@@ -58,7 +62,11 @@ body {
     width: 24px;
     height: 24px;
     color: #b7b7b7; /* Default icon color */
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 25px; /* Space between icon and text */
+}
+
+.menu-item:hover .icon {
+    color: #2374f8; /* Icon color on hover */
 }
 
 /* Optional: Add some styles for the text */
