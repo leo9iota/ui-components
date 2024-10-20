@@ -52,28 +52,28 @@ body {
 }
 
 .menu-item {
-    display: flex;
+    display: flex; /* Define display flex */
     position: relative;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: center; /* Center flex items vertically */
+    justify-content: flex-start; /* Align flex items to left side */
     padding: 15px 0;
-    padding-left: 0; /* Ensure no left padding so the bar touches the edge */
-    transition: padding-left 0.3s;
+    padding-left: 10px; /* Add initial padding to the left */
+    transition: padding-left 0.3s; /* Smooth transition for padding */
 }
 
-.container::before {
+.menu-item::before {
     position: absolute;
     content: '';
     top: 0;
-    left: 0;
-    width: 5px; /* Set the width of the blue bar */
-    height: 100%; /* The bar covers the entire height of the container */
-    background-color: #2374f8;
-    transition: width 0.3s;
+    left: -20px;
+    width: 0;
+    height: 100%;
+    background-color: #2374f8; /* Color of the rectangle bar */
+    transition: width 0.1s; /* Smooth transition for width */
 }
 
 .menu-item:hover {
-    padding-left: 5px;
+    padding-left: 15px; /* Increase padding on hover */
 }
 
 .menu-item:hover::before {
@@ -88,7 +88,7 @@ body {
 }
 
 .menu-item:hover .icon {
-    color: #2374f8; /* Adjust icon color on hover */
+    color: #2374f8; /* Icon color on hover */
 }
 
 /* Optional: Add some styles for the text */
