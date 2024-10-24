@@ -14,7 +14,7 @@ body {
     max-height: 700px;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0 0 50px 10px white;
+    box-shadow: 0 0 50px 100px white;
 }
 
 .top-right {
@@ -74,6 +74,7 @@ body {
 
 .menu-item:hover {
     padding-left: 15px; /* Increase padding on hover */
+    background-color: #e0f0ff; /* Light blue background color on hover */
 }
 
 .menu-item:hover::before {
