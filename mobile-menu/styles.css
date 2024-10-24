@@ -1,5 +1,4 @@
 /* ---------------- Global ---------------- */
-
 :root {
     --main-color: #628dff;
     --background-color: #f0f4ff;
@@ -137,6 +136,43 @@ body {
 
 .menu-button span {
     font-size: 1rem; /* Text size */
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Profile Image */
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    object-fit: cover;
+    box-shadow: 0 0 10px var(--shadow-color);
+    margin-bottom: 15px;
+}
+
+/* Profile Info */
+.profile-info h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #777;
 }
 
 /* ---------------- Fonts ----------------  */
