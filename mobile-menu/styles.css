@@ -1,11 +1,13 @@
 /* ---------------- Global ---------------- */
+
 :root {
-    --main-color: #2374f8;
+    --main-color: #628dff;
     --background-color: #f0f4ff;
     --shadow-color: #e1e9ff;
 }
 
 body {
+    font-family: 'Nokora', sans-serif;
     background-color: var(--background-color);
     margin: 0;
     height: 100vh;
@@ -125,7 +127,7 @@ body {
 }
 
 .menu-button:hover {
-    background-color: var(--main-color); /* Darken the button on hover */
+    background-color: var(--main-color);
     filter: brightness(90%); /* Reduce brightness to darken */
 }
 
