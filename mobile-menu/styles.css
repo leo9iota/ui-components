@@ -37,7 +37,7 @@ body {
     transform: translate(-40%, 40%);
 }
 
-/* Box */
+/* Menu */
 .container {
     position: absolute;
     top: 50%;
@@ -68,6 +68,7 @@ body {
     padding: 15px 0;
     padding-left: 10px; /* Add initial padding to the left */
     transition: padding-left 0.3s; /* Smooth transition for padding */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 .menu-item::before {
@@ -102,6 +103,28 @@ body {
 
 .menu-item span {
     font-size: 16px;
+}
+
+.button-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Menu Button */
+.menu-button {
+    background-color: var(--main-color); /* Use the main color defined in your CSS variables */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.menu-button:hover {
+    background-color: var(--main-color); /* Darken the button on hover */
+    filter: brightness(90%); /* Reduce brightness to darken */
 }
 
 /* ---------------- Font Weights ----------------  */
