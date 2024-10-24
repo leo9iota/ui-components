@@ -74,7 +74,6 @@ body {
 
 .menu-item:hover {
     padding-left: 15px; /* Increase padding on hover */
-    background-color: #e0f0ff; /* Light blue background color on hover */
 }
 
 .menu-item:hover::before {
