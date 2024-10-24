@@ -1,11 +1,19 @@
+/* Global */
+:root {
+    --main-color: #2374f8;
+    --background-color: #f0f4ff;
+    --shadow-color: #e1e9ff;
+}
+
 body {
-    background-color: #f0f4ff;
+    background-color: var(--background-color);
     margin: 0;
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
+/* Background */
 .circle {
     position: absolute;
     width: 100vw;
@@ -29,6 +37,7 @@ body {
     transform: translate(-40%, 40%);
 }
 
+/* Box */
 .container {
     position: absolute;
     top: 50%;
@@ -39,7 +48,7 @@ body {
     max-height: 1200px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0 0 50px 15px #e1e9ff;
+    box-shadow: 0 0 50px 15px var(--shadow-color);
     padding: 20px;
 }
 
@@ -48,7 +57,7 @@ body {
 }
 
 .container > div:hover {
-    color: #2374f8; /* Text color on hover */
+    color: var(--main-color); /* Text color on hover */
 }
 
 .menu-item {
@@ -68,7 +77,7 @@ body {
     left: -20px;
     width: 0;
     height: 100%;
-    background-color: #2374f8; /* Color of the rectangle bar */
+    background-color: var(--main-color); /* Color of the rectangle bar */
     transition: width 0.1s; /* Smooth transition for width */
 }
 
@@ -88,10 +97,9 @@ body {
 }
 
 .menu-item:hover .icon {
-    color: #2374f8; /* Icon color on hover */
+    color: var(--main-color); /* Icon color on hover */
 }
 
-/* Optional: Add some styles for the text */
 .menu-item span {
     font-size: 16px;
 }
