@@ -1,6 +1,16 @@
+/* ---------------- Debug ---------------- */
+/* *,
+*::before,
+*::after {
+    outline: 1px solid lime;
+    background: hsl(0 100% 50% / 0.2);
+
+} */
+
 /* ---------------- Global ---------------- */
 :root {
     --main-color: #628dff;
+    --secondary-color: #4d71d5;
     --background-color: #f0f4ff;
     --shadow-color: #e1e9ff;
 }
@@ -45,16 +55,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /* Centering box both horizontally and vertically */
     width: 80%;
-    max-width: 300px;
-    max-height: 1200px;
+    max-width: 400px;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 0 50px 15px var(--shadow-color);
     padding: 20px;
-}
-
-.container > div {
-    padding: 25px;
 }
 
 .container > div:hover {
@@ -138,31 +143,30 @@ body {
     font-size: 1rem; /* Text size */
 }
 
-/* Profile Container */
+/* ---------------- Profile ---------------- */
 .profile-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: 0 5px 15px var(--shadow-color);
-    padding: 20px;
-    max-width: 300px;
-    margin: 0 auto;
+}
+
+.profile-background {
 }
 
 /* Profile Image */
 .profile-image img {
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
-    border: 3px solid var(--main-color);
-    object-fit: cover;
-    box-shadow: 0 0 10px var(--shadow-color);
-    margin-bottom: 15px;
+    width: 90px;
+    border: 5px solid var(--secondary-color);
 }
 
 /* Profile Info */
+.profile-info {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left */
+    margin-left: 15px; /* Add some space between the image and text */
+}
+
 .profile-info h1 {
     margin: 0;
     font-size: 1.5rem;
