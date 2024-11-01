@@ -60,6 +60,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 50px 15px var(--shadow-color);
     padding: 20px;
+    overflow: hidden; /* Ensures children are clipped to the container */
 }
 
 .container > div:hover {
@@ -146,9 +147,19 @@ body {
 /* ---------------- Profile ---------------- */
 .profile-container {
     display: flex;
+    position: relative; /* Ensure the absolute positioning of the child works correctly */
 }
 
 .profile-background {
+    position: absolute; /* Position it absolutely */
+    bottom: -20px; /* Slightly elevated from the bottom */
+    right: -20px; /* Slightly elevated from the right */
+    width: 250px; /* Adjust width as needed */
+    height: 250px; /* Adjust height as needed */
+    background-color: var(--main-color); /* Blue background using the main color */
+    border-radius: 15px; /* Big border radius to make it circular */
+    transform: rotate(-10deg); /* Slight angle */
+    z-index: -1; /* Sit behind all other elements */
 }
 
 /* Profile Image */
