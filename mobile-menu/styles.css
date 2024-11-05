@@ -1,201 +1,36 @@
-/* ---------------- Debug ---------------- */
+/* ------------------ */
+/* Debug              */
+/* ------------------ */
 /* *,
 *::before,
 *::after {
     outline: 1px solid lime;
     background: hsl(0 100% 50% / 0.2);
-
 } */
 
-/* ---------------- Global ---------------- */
+/* ------------------ */
+/* Global             */
+/* ------------------ */
 :root {
-    --main-color: #628dff;
+    --main-color: #0075d9;
     --secondary-color: #4d71d5;
     --background-color: #f0f4ff;
     --shadow-color: #e1e9ff;
 }
 
 body {
-    font-family: 'Nokora', sans-serif;
+    position: relative;
+    height: 100vh;
     background-color: var(--background-color);
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+    font-family: 'Nokora', sans-serif;
+    overflow-y: auto; /* Ensure vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-/* ---------------- Background ---------------- */
-.circle {
-    position: absolute;
-    width: 100vw;
-    height: 100vw;
-    max-width: 700px;
-    max-height: 700px;
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0 0 50px 100px white;
-}
-
-.top-right {
-    top: 0;
-    right: 0;
-    transform: translate(40%, -40%);
-}
-
-.bottom-left {
-    bottom: 0;
-    left: 0;
-    transform: translate(-40%, 40%);
-}
-
-/* ---------------- Menu ---------------- */
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centering box both horizontally and vertically */
-    width: 350px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 50px 15px var(--shadow-color);
-    padding: 20px;
-    overflow: hidden; /* Ensures children are clipped to the container */
-}
-
-.container > div:hover {
-    color: var(--main-color); /* Text color on hover */
-}
-
-.menu-container {
-    
-}
-
-.menu-item {
-    display: flex; /* Define display flex */
-    position: relative;
-    align-items: center; /* Center flex items vertically */
-    justify-content: flex-start; /* Align flex items to left side */
-    padding: 15px 0;
-    padding-left: 10px; /* Add initial padding to the left */
-    margin: 10px 0; /* Add vertical margin */
-    transition: padding-left 0.3s; /* Smooth transition for padding */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.menu-item::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: -20px;
-    width: 0;
-    height: 100%;
-    background-color: var(--main-color); /* Color of the rectangle bar */
-    transition: width 0.1s; /* Smooth transition for width */
-}
-
-.menu-item:hover {
-    padding-left: 15px; /* Increase padding on hover */
-}
-
-.menu-item:hover::before {
-    width: 5px; /* Width of the rectangle bar on hover */
-}
-
-.menu-item .menu-icon {
-    width: 24px;
-    height: 24px;
-    color: #b7b7b7; /* Default icon color */
-    margin-right: 25px; /* Space between icon and text */
-}
-
-.menu-item:hover .menu-icon {
-    color: var(--main-color); /* Icon color on hover */
-}
-
-.menu-item span {
-    font-size: 1rem;
-}
-
-/* Menu Button */
-.button-container {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-.menu-button {
-    display: flex; /* Use flexbox for the button */
-    align-items: center; /* Center items vertically within the button */
-    background-color: var(--main-color); /* Use the main color defined in your CSS variables */
-    color: white; /* Text color */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding inside the button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-}
-
-.menu-button:hover {
-    background-color: var(--main-color);
-    filter: brightness(90%); /* Reduce brightness to darken */
-}
-
-.menu-button .button-icon {
-    margin-right: 10px; /* Space between the icon and the text */
-}
-
-.menu-button span {
-    font-size: 1rem; /* Text size */
-}
-
-/* ---------------- Profile ---------------- */
-.profile-container {
-    display: flex;
-    position: relative; /* Ensure the absolute positioning of the child works correctly */
-}
-
-.profile-background {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background-color: var(--main-color);
-    border-radius: 100px;
-    transform: rotate(-15deg);
-    z-index: -1;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%) rotate(-15deg); /* Centering */
-}
-
-/* Profile Image */
-.profile-image img {
-    border-radius: 50%;
-    width: 90px;
-    border: 5px solid var(--secondary-color);
-}
-
-/* Profile Info */
-.profile-info {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center;
-    align-items: flex-start; /* Align text to the left */
-    margin-left: 15px; /* Add some space between the image and text */
-}
-
-.profile-info h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.profile-info p {
-    margin: 5px 0 0;
-    font-size: 1rem;
-    color: #777;
-}
-
-/* ---------------- Fonts ----------------  */
+/* ------------------ */
+/* Fonts              */
+/* ------------------ */
 .nokora-thin {
     font-family: 'Nokora', sans-serif;
     font-weight: 100;
@@ -226,8 +61,227 @@ body {
     font-style: normal;
 }
 
-/* ---------------- Responsive Design ---------------- */
+/* ------------------ */
+/* Background         */
+/* ------------------ */
+.circle-container {
+    position: relative; /* Necessary for absolute positioning */
+    overflow: hidden; /* Hide overflow content */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    width: 100vw; /* Ensure it covers the full viewport width */
+}
 
+.circle {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    max-width: 700px;
+    max-height: 700px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 100px white;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-40%, 40%);
+}
+
+/* ------------------ */
+/* Navbar             */
+/* ------------------ */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for depth */
+    z-index: 10; /* Ensure it is on top of other elements */
+}
+
+.navbar-container nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sonio-logo {
+    height: 40px; /* Adjust the size of the logo */
+}
+
+/* ------------------ */
+/* Menu               */
+/* ------------------ */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering box both horizontally and vertically */
+    width: 350px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 50px 15px var(--shadow-color);
+    padding: 20px;
+    overflow: hidden; /* Ensures children are clipped to the container */
+}
+
+.menu-container {
+    margin-top: 30px;
+}
+
+.menu-item {
+    display: flex; /* Define display flex */
+    position: relative;
+    align-items: center; /* Center flex items vertically */
+    justify-content: flex-start; /* Align flex items to left side */
+    padding: 15px 0;
+    padding-left: 10px; /* Add initial padding to the left */
+    margin: 10px 0; /* Add vertical margin */
+    transition: padding-left 0.3s; /* Smooth transition for padding */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.menu-item::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -20px;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color); /* Color of the rectangle bar */
+    transition: width 0.1s; /* Smooth transition for width */
+}
+
+.menu-item:hover {
+    padding-left: 15px; /* Increase padding on hover */
+    color: var(--main-color); /* Text color on hover */
+}
+
+.menu-item:hover::before {
+    width: 5px; /* Width of the rectangle bar on hover */
+}
+
+.menu-item .menu-icon {
+    width: 24px;
+    height: 24px;
+    color: #b7b7b7; /* Default icon color */
+    margin-right: 25px; /* Space between icon and text */
+}
+
+.menu-item:hover .menu-icon {
+    color: var(--main-color); /* Icon color on hover */
+}
+
+.menu-item span {
+    font-size: 1rem;
+}
+
+/* ------------------ */
+/* Menu Button        */
+/* ------------------ */
+.button-container {
+    margin-top: 80px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.menu-button {
+    display: flex; /* Use flexbox for the button */
+    align-items: center; /* Center items vertically within the button */
+    background-color: var(--main-color); /* Use the main color defined in your CSS variables */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.menu-button:hover {
+    background-color: var(--main-color);
+    filter: brightness(90%); /* Reduce brightness to darken */
+}
+
+.menu-button .button-icon {
+    margin-right: 10px; /* Space between the icon and the text */
+}
+
+.menu-button span {
+    font-size: 1rem; /* Text size */
+}
+
+/* ------------------ */
+/* Profile            */
+/* ------------------ */
+.profile-container {
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    position: relative; /* Ensure the absolute positioning of the child works correctly */
+}
+
+.profile-background {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(var(--main-color), #284caf);
+    border-radius: 80px;
+    z-index: -1;
+    top: -150px; /* Adjust the value to move it upwards */
+    left: 180px;
+    transform: translate(-50%, -50%) rotate(80deg); /* Centering */
+}
+
+/* Profile Image */
+.profile-image img {
+    border-radius: 50%;
+    width: 90px;
+    border: 5px solid var(--secondary-color);
+}
+
+/* Profile Info */
+.profile-info {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left */
+    margin-left: 15px; /* Add some space between the image and text */
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #f4feff;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #c5dbff;
+}
+
+/* ------------------ */
+/* Footer             */
+/* ------------------ */
+.footer-container {
+    height: 2000px; /* Adjust the height as necessary to make the page scrollable */
+    padding: 20px; /* Add padding inside the footer */
+    margin-top: 20px; /* Add margin above the footer */
+    margin-bottom: 20px; /* Add margin below the footer */
+}
+
+/* ------------------ */
+/* Responsive Design  */
+/* ------------------ */
 /* Small screens (mobile devices) */
 @media only screen and (max-width: 768px) {
     .rectangular-box {
