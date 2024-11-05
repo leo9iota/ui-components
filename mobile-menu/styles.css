@@ -1,13 +1,12 @@
 /* ------------------ */
 /* Debug              */
 /* ------------------ */
-/* *,
+*,
 *::before,
 *::after {
     outline: 1px solid lime;
     background: hsl(0 100% 50% / 0.2);
-
-} */
+}
 
 /* ------------------ */
 /* Global             */
@@ -20,18 +19,57 @@
 }
 
 body {
-    font-family: 'Nokora', sans-serif;
+    position: relative;
+    height: 100vh;
     background-color: var(--background-color);
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    padding-top: 60px; /* Adjust based on navbar height */
+    font-family: 'Nokora', sans-serif;
+    overflow-y: auto; /* Ensure vertical scrolling */
+}
+
+/* ------------------ */
+/* Fonts              */
+/* ------------------ */
+.nokora-thin {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nokora-light {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nokora-regular {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nokora-bold {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nokora-black {
+    font-family: 'Nokora', sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 /* ------------------ */
 /* Background         */
 /* ------------------ */
+.circle-container {
+    position: relative; /* Necessary for absolute positioning */
+    overflow: hidden; /* Hide overflow content */
+    height: 100vh; /* Ensure it covers the full viewport height */
+    width: 100vw; /* Ensure it covers the full viewport width */
+}
+
 .circle {
     position: absolute;
     width: 100vw;
@@ -78,7 +116,9 @@ body {
     height: 40px; /* Adjust the size of the logo */
 }
 
-/* ---------------- Menu ---------------- */
+/* ------------------ */
+/* Menu               */
+/* ------------------ */
 .container {
     position: absolute;
     top: 50%;
@@ -143,7 +183,9 @@ body {
     font-size: 1rem;
 }
 
-/* Menu Button */
+/* ------------------ */
+/* Menu Button        */
+/* ------------------ */
 .button-container {
     margin-top: 80px;
     display: flex; /* Use flexbox */
@@ -226,39 +268,19 @@ body {
     color: #c5dbff;
 }
 
-/* ---------------- Fonts ----------------  */
-.nokora-thin {
-    font-family: 'Nokora', sans-serif;
-    font-weight: 100;
-    font-style: normal;
+/* ------------------ */
+/* Footer             */
+/* ------------------ */
+.footer-container {
+    height: 2000px; /* Adjust the height as necessary to make the page scrollable */
+    padding: 20px; /* Add padding inside the footer */
+    margin-top: 20px; /* Add margin above the footer */
+    margin-bottom: 20px; /* Add margin below the footer */
 }
 
-.nokora-light {
-    font-family: 'Nokora', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.nokora-regular {
-    font-family: 'Nokora', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.nokora-bold {
-    font-family: 'Nokora', sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.nokora-black {
-    font-family: 'Nokora', sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-/* ---------------- Responsive Design ---------------- */
-
+/* ------------------ */
+/* Responsive Design  */
+/* ------------------ */
 /* Small screens (mobile devices) */
 @media only screen and (max-width: 768px) {
     .rectangular-box {
