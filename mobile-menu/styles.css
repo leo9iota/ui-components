@@ -1,4 +1,6 @@
-/* ---------------- Debug ---------------- */
+/* ------------------ */
+/* Debug              */
+/* ------------------ */
 /* *,
 *::before,
 *::after {
@@ -7,7 +9,9 @@
 
 } */
 
-/* ---------------- Global ---------------- */
+/* ------------------ */
+/* Global             */
+/* ------------------ */
 :root {
     --main-color: #628dff;
     --secondary-color: #4d71d5;
@@ -22,9 +26,12 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    padding-top: 60px; /* Adjust based on navbar height */
 }
 
-/* ---------------- Background ---------------- */
+/* ------------------ */
+/* Background         */
+/* ------------------ */
 .circle {
     position: absolute;
     width: 100vw;
@@ -48,6 +55,29 @@ body {
     transform: translate(-40%, 40%);
 }
 
+/* ------------------ */
+/* Navbar             */
+/* ------------------ */
+.navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for depth */
+    z-index: 10; /* Ensure it is on top of other elements */
+}
+
+.navbar-container nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sonio-logo {
+    height: 40px; /* Adjust the size of the logo */
+}
+
 /* ---------------- Menu ---------------- */
 .container {
     position: absolute;
@@ -62,12 +92,8 @@ body {
     overflow: hidden; /* Ensures children are clipped to the container */
 }
 
-.container > div:hover {
-    color: var(--main-color); /* Text color on hover */
-}
-
 .menu-container {
-    
+    margin-top: 30px;
 }
 
 .menu-item {
@@ -95,6 +121,7 @@ body {
 
 .menu-item:hover {
     padding-left: 15px; /* Increase padding on hover */
+    color: var(--main-color); /* Text color on hover */
 }
 
 .menu-item:hover::before {
@@ -118,6 +145,7 @@ body {
 
 /* Menu Button */
 .button-container {
+    margin-top: 80px;
     display: flex; /* Use flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -148,8 +176,12 @@ body {
     font-size: 1rem; /* Text size */
 }
 
-/* ---------------- Profile ---------------- */
+/* ------------------ */
+/* Profile            */
+/* ------------------ */
 .profile-container {
+    margin-top: 20px;
+    margin-left: 10px;
     display: flex;
     position: relative; /* Ensure the absolute positioning of the child works correctly */
 }
@@ -158,13 +190,12 @@ body {
     position: absolute;
     width: 500px;
     height: 500px;
-    background-color: var(--main-color);
-    border-radius: 100px;
-    transform: rotate(-15deg);
+    background: linear-gradient(#3962d3, var(--main-color));
+    border-radius: 80px;
     z-index: -1;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%) rotate(-15deg); /* Centering */
+    top: -150px; /* Adjust the value to move it upwards */
+    left: 180px;
+    transform: translate(-50%, -50%) rotate(80deg); /* Centering */
 }
 
 /* Profile Image */
@@ -186,13 +217,13 @@ body {
 .profile-info h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: #333;
+    color: #f4feff;
 }
 
 .profile-info p {
     margin: 5px 0 0;
     font-size: 1rem;
-    color: #777;
+    color: #c5dbff;
 }
 
 /* ---------------- Fonts ----------------  */
