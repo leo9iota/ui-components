@@ -1,12 +1,12 @@
 /* ------------------ */
 /* Debug              */
 /* ------------------ */
-*,
+/* *,
 *::before,
 *::after {
     outline: 1px solid lime;
     background: hsl(0 100% 50% / 0.2);
-}
+} */
 
 /* ------------------ */
 /* Global             */
@@ -25,6 +25,7 @@ body {
     margin: 0;
     font-family: 'Nokora', sans-serif;
     overflow-y: auto; /* Ensure vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* ------------------ */
