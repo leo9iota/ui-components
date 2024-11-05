@@ -233,7 +233,7 @@ body {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: linear-gradient(#3962d3, var(--main-color));
+    background: linear-gradient(var(--main-color), #284caf);
     border-radius: 80px;
     z-index: -1;
     top: -150px; /* Adjust the value to move it upwards */
