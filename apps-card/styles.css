@@ -1,0 +1,70 @@
+/* -------------------- */
+/* Debug                */
+/* -------------------- */
+/* *,
+*::before,
+*::after {
+    outline: 1px solid lime;
+    background: hsl(0 100% 50% / 0.2);
+} */
+
+/* -------------------- */
+/* Global               */
+/* -------------------- */
+:root {
+    --background-color-1: #8170b3;
+    --background-color-2: #3b4d7b;
+}
+
+body {
+    background: linear-gradient(
+        to bottom right,
+        var(--background-color-1),
+        var(--background-color-2)
+    );
+    background-attachment: fixed; /* Ensures background stays fixed */
+    background-size: cover; /* Ensures background covers entire element */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+}
+
+/* -------------------- */
+/* Fonts                */
+/* -------------------- */
+.font-inter-main {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-inter-secondary {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -------------------- */
+/* Global Container     */
+/* -------------------- */
+.global-container {
+}
+
+/* -------------------- */
+/* App Card Container   */
+/* -------------------- */
+.app-card-container {
+}
+
+.apps-card {
+    position: absolute; /* Set position absolute */
+    width: 300px; /* Set width of box */
+    height: 200px; /* Set height of box */
+    background-color: white; /* White background */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    padding: 20px; /* Add some padding inside the box */
+    border-radius: 5px; /* Add slightly rounded corners */
+}
