@@ -14,6 +14,12 @@
 :root {
     --background-color-1: #8170b3;
     --background-color-2: #3b4d7b;
+
+    --font-color-1: #273949;
+    --font-color-2: #646e7a;
+    --font-color-3: #f2fbff;
+
+    --separator-color: #f4f4f4;
 }
 
 body {
@@ -56,10 +62,13 @@ body {
 .app-card-container {
 }
 
-.apps-card {
+/* -------------------- */
+/* App Card             */
+/* -------------------- */
+.app-card {
     position: absolute; /* Set position absolute */
-    width: 300px; /* Set width of box */
-    height: 200px; /* Set height of box */
+    width: 400px; /* Set width of box */
+    height: 480px; /* Set height of box */
     background-color: white; /* White background */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
@@ -67,4 +76,29 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
     padding: 20px; /* Add some padding inside the box */
     border-radius: 5px; /* Add slightly rounded corners */
+}
+
+/* -------------------- */
+/* App Card Title       */
+/* -------------------- */
+.app-card h1.font-inter-main {
+    color: var(--font-color-1);
+    margin: 0;
+}
+
+/* -------------------- */
+/* App Card Separator   */
+/* -------------------- */
+.separator {
+    background-color: var(--separator-color);
+    height: 3px; /* Separator thinness */
+    width: 100%; /* Use whole with of container */
+    border-radius: 1px; /* Round borders of separator */
+    margin: 0; /* Add vertical margin */
+    margin: 15px 0;
+
+}
+
+.app-content {
+    
 }
