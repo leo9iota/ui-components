@@ -19,6 +19,9 @@
     --font-color-2: #646e7a;
     --font-color-3: #f2fbff;
 
+    --button-color-1: #6780ff;
+    --button-color-2: #7fd422;
+
     --separator-color: #f4f4f4;
 }
 
@@ -96,9 +99,21 @@ body {
     border-radius: 1px; /* Round borders of separator */
     margin: 0; /* Add vertical margin */
     margin: 15px 0;
-
 }
 
 .app-content {
-    
+}
+
+/* -------------------- */
+/* Button               */
+/* -------------------- */
+.main-button-container {
+}
+
+.main-button {
+    background-color: var(--button-color-1);
+    color: var(--font-color-3);
+    width: 100%;
+
+    border-radius: 5px;
 }
