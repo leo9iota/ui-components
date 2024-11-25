@@ -105,15 +105,24 @@ body {
 }
 
 /* -------------------- */
-/* Button               */
+/* Main Button          */
 /* -------------------- */
 .main-button-container {
 }
 
 .main-button {
-    background-color: var(--button-color-1);
-    color: var(--font-color-3);
-    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--button-color-1); /* Set button color */
+    color: var(--font-color-3); /* Set font color */
+    width: 100%; /* Set with to whole width of parent container */
+    border-radius: 5px; /* Set border radius */
+    padding: 15px 20px; /* Add some padding */
+    font-size: 16px; /* Set a specific font size */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
 
-    border-radius: 5px;
+.main-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
