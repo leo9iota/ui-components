@@ -90,7 +90,7 @@ body {
 }
 
 /* -------------------- */
-/* App Card Separator   */
+/* App Cards            */
 /* -------------------- */
 .separator {
     background-color: var(--separator-color);
@@ -101,7 +101,11 @@ body {
     margin: 15px 0;
 }
 
-.app-content {
+.app-container {
+}
+
+.app-icon {
+    
 }
 
 /* -------------------- */
@@ -114,6 +118,6 @@ body {
     background-color: var(--button-color-1);
     color: var(--font-color-3);
     width: 100%;
-
+    height: 40px;
     border-radius: 5px;
 }
