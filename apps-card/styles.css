@@ -134,14 +134,6 @@ body {
 /* Apps Card            */
 /* -------------------- */
 
-.app-icon div img {
-    width: 50px;
-}
-
-/* -------------------- */
-/* Apps Card            */
-/* -------------------- */
-
-.app-icon div img {
+.app-icon img {
     width: 50px;
 }
