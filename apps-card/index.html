@@ -9,16 +9,65 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./sanitize.css" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./styles.css" />
     <title>Apps Card</title>
   </head>
   <body>
     <div class="global-container">
-      <div class="app-card-container font-inter-main">
-        <div class="apps-card">
-          <h1>Box</h1>
-          <p>Some text.</p>
+      <div class="app-card-container">
+        <div class="app-card">
+          <h1 class="font-inter-main">Apps</h1>
+          <div class="separator"></div>
+          <div class="app-container">
+            <div class="app-icon">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732245.png" alt="Slack" />
+              <p>Slack</p>
+            </div>
+            <div class="app-icon">
+              <img src="https://cdn-icons-png.flaticon.com/512/6124/6124991.png" alt="Trello" />
+              <p>Trello</p>
+            </div>
+            <div class="app-icon">
+              <img
+                src="https://3.bp.blogspot.com/-C6JvV6wGQNI/WsN5C-JvORI/AAAAAAABSuA/asQVAuRo3Z8AA1RQK8Ef52Zjx3wdsTTWQCLcBGAs/s1600/realtime%2Bboard.PNG"
+                alt="RealtimeBoard"
+              />
+              <p>RealtimeBoard</p>
+            </div>
+            <div class="app-icon">
+              <img
+                src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-atlassian/events/jira_n1TZdqk.jpg"
+                alt="Jira"
+              />
+              <p>Jira</p>
+            </div>
+            <div class="app-icon">
+              <img
+                src="https://seeklogo.com/images/I/iconfinder-logo-8D1849FB8E-seeklogo.com.png"
+                alt="Icon Finder"
+              />
+              <p>Icon Finder</p>
+            </div>
+            <div class="app-icon">
+              <img
+                src="https://gearproxy.neuservgroup.com/wp-content/uploads/sites/2/2020/08/dropbox-logo-0F736A6F49-seeklogo.com_.png"
+                alt="Dropbox"
+              />
+              <p>Dropbox</p>
+            </div>
+          </div>
+          <div class="separator"></div>
+          <div class="main-button-container">
+            <button class="main-button">
+              <span>Add App</span>
+            </button>
+          <div class="button-container">
+            <button class="main-button">
+              <span class="font-inter-main">Add App</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
