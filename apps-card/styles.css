@@ -133,6 +133,7 @@ body {
 /* -------------------- */
 /* Apps Card            */
 /* -------------------- */
-.app-icon div img {
+
+.app-icon img {
     width: 50px;
 }
