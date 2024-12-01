@@ -65,6 +65,11 @@ body {
 .app-card-container {
 }
 
+.app-card {
+    display: flex;
+    flex-direction: column;
+}
+
 /* -------------------- */
 /* App Card             */
 /* -------------------- */
@@ -82,11 +87,16 @@ body {
 }
 
 /* -------------------- */
-/* App Card Title       */
+/* Font Sizes           */
 /* -------------------- */
 .app-card h1.font-inter-main {
     color: var(--font-color-1);
-    margin: 0;
+    font-size: 1.75em;
+}
+
+.app-card .app-icon h2 {
+    color: var(--font-color-2);
+    font-size: 0.9em;
 }
 
 /* -------------------- */
@@ -133,25 +143,29 @@ body {
 /* -------------------- */
 /* Apps Card            */
 /* -------------------- */
-.app-grid {
+.app-flex {
+    flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+    overflow-y: auto; /* Add scrollbar if content overflows */
 }
 
 .app-icon {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.app-icon h2 {
-    
+.app-icon img {
+    width: 60px;
+    margin-bottom: 20px;
 }
 
-.app-icon img {
-    width: 50px;
-    height: 50px;
+.app-icon h2 {
+    margin: 0;
+    font-size: 0.8em;
 }
