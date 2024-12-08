@@ -23,6 +23,8 @@
     --button-color-2: #7fd422;
 
     --separator-color: #f4f4f4;
+
+    --shadow-color: rgba(103, 128, 255, 0.25);
 }
 
 body {
@@ -69,6 +71,11 @@ h1 {
 .app-card-container {
 }
 
+.app-card {
+    display: flex;
+    flex-direction: column;
+}
+
 /* -------------------- */
 /* App Card             */
 /* -------------------- */
@@ -86,11 +93,16 @@ h1 {
 }
 
 /* -------------------- */
-/* App Card Title       */
+/* Font Sizes           */
 /* -------------------- */
 .app-card h1.font-inter-main {
     color: var(--font-color-1);
-    margin: 0;
+    font-size: 1.75em;
+}
+
+.app-card .app-icon h2 {
+    color: var(--font-color-2);
+    font-size: 0.9em;
 }
 
 /* -------------------- */
@@ -137,25 +149,58 @@ h1 {
 /* -------------------- */
 /* Apps Card            */
 /* -------------------- */
-.app-grid {
+.app-flex {
+    position: relative; /* Add this to contain absolute positioning */
+    flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+    overflow: hidden; /* Change from overflow-y: auto to hidden */
 }
 
 .app-icon {
+    position: relative; /* Add this for positioning the pseudo-element */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 1; /* Ensure icon is above the hover effect */
+    padding: 10px; /* Add padding to give space for the hover effect */
 }
 
-.app-icon h2 {
-    
+.app-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 25px var(--shadow-color);
+    background-color: white; /* Light blue, matching button color */
+    transform: translate(-50%, -50%);
+    /* transition: width 0.1s ease, height 0.3s ease; */
+    z-index: -1; /* Place behind the icon content */
+    border-radius: 10px; /* Rounded corners for the hover effect */
+}
+
+.app-icon:hover::before {
+    width: calc(100% - 20px); /* Subtract padding to keep within bounds */
+    height: calc(100% - 20px); /* Subtract padding to keep within bounds */
 }
 
 .app-icon img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Add smooth transition for icon */
+}
+
+/* .app-icon:hover img {
+    transform: scale(1.1); Slightly enlarge icon on hover
+} */
+
+.app-icon h2 {
+    margin: 0;
+    font-size: 0.8em;
 }
