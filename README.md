@@ -1,6 +1,6 @@
 # UI Components
 
-Small UI components that can be integrated into larger projects.
+UI components that can be integrated into larger projects.
 
 ## Apps Card
 
@@ -9,3 +9,10 @@ Small UI components that can be integrated into larger projects.
 
 
 ## Social Login
+
+
+## Matrix String
+
+
+
+## Cards
