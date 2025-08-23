@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "ESNext",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "moduleResolution": "Bundler",
+        "strict": true,
+        "declaration": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "@leo9iota/ui-react": ["packages/ui-react"],
+            "@leo9iota/ui-svelte": ["packages/ui-svelte"],
+            "@leo9iota/ui-vue": ["packages/ui-vue"]
+        }
+    }
+}
