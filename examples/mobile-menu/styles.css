@@ -124,7 +124,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centering box both horizontally and vertically */
+    transform: translate(
+        -50%,
+        -50%
+    ); /* Centering box both horizontally and vertically */
     width: 350px;
     background-color: white;
     border-radius: 15px;
@@ -197,7 +200,9 @@ body {
 .menu-button {
     display: flex; /* Use flexbox for the button */
     align-items: center; /* Center items vertically within the button */
-    background-color: var(--main-color); /* Use the main color defined in your CSS variables */
+    background-color: var(
+        --main-color
+    ); /* Use the main color defined in your CSS variables */
     color: white; /* Text color */
     border: none; /* No border */
     padding: 10px 20px; /* Padding inside the button */

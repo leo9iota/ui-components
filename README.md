@@ -10,7 +10,6 @@ Modular UI components that can be integrated into larger projects.
 
 ## Svelte Components
 
-
 ## Vue Components
 
 ### Apps Card

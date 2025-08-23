@@ -1,6 +1,6 @@
 export default {
-  preprocess: [],
-  compilerOptions: {
-    runes: true
-  }
+    preprocess: [],
+    compilerOptions: {
+        runes: true,
+    },
 };

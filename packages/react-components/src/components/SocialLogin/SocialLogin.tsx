@@ -33,14 +33,16 @@ export const SocialLogin: React.FC<SocialLoginProps> = ({
   };
 
   return (
-    <div className={`flex justify-center items-center min-h-screen bg-[#f5f5f5] ${className}`}>
-      <div 
-        className="flex justify-center items-center rounded-[22px] w-[930px] h-[330px] bg-[#dce4f8]"
+    <div
+      className={`flex justify-center items-center min-h-screen bg-[#f5f5f5] ${className}`}
+    >
+      <div
+        className='flex justify-center items-center rounded-[22px] w-[930px] h-[330px] bg-[#dce4f8]'
         style={{
-          boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.15)'
+          boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.15)',
         }}
       >
-        <div className="relative flex flex-col justify-center items-center w-[900px] h-[300px] rounded-[15px] bg-gradient-to-[135deg] from-[#617bda] to-[#1134b0]">
+        <div className='relative flex flex-col justify-center items-center w-[900px] h-[300px] rounded-[15px] bg-gradient-to-[135deg] from-[#617bda] to-[#1134b0]'>
           {/* Login Text */}
           <div className='text-center'>
             <h1 className='text-white text-3xl font-bold mb-2'>{title}</h1>
@@ -51,7 +53,7 @@ export const SocialLogin: React.FC<SocialLoginProps> = ({
 
           {/* Login Form */}
           <form onSubmit={handleSubmit} className='mt-8'>
-            <div className="flex items-center border border-white rounded-full px-4 py-3 w-[400px] bg-[#5871d5]">
+            <div className='flex items-center border border-white rounded-full px-4 py-3 w-[400px] bg-[#5871d5]'>
               <input
                 type='email'
                 placeholder={placeholder}
