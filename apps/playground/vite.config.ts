@@ -24,7 +24,10 @@ export default defineConfig({
             // Optional quality-of-life aliases for local packages
             '@acme/ui-react': resolve(__dirname, '../../packages/ui-react/src'),
             '@acme/ui-vue': resolve(__dirname, '../../packages/ui-vue/src'),
-            '@acme/ui-svelte': resolve(__dirname, '../../packages/ui-svelte/src'),
+            '@acme/ui-svelte': resolve(
+                __dirname,
+                '../../packages/ui-svelte/src',
+            ),
         },
     },
 });

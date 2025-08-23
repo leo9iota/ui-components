@@ -1,5 +1,5 @@
 extends:
-  - "@commitlint/config-conventional"
+  - '@commitlint/config-conventional'
 
 rules:
   # Commit types
@@ -32,7 +32,7 @@ rules:
   subject-full-stop:
     - 2
     - never
-    - "."
+    - '.'
 
   # Header length
   header-max-length:

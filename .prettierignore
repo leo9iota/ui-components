@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Cache directories
+.turbo/
+.cache/
+.vscode/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Lock files
+package-lock.json
+yarn.lock
+bun.lock
+
+# Generated files
+coverage/
+.nyc_output/
+.DS_Store
+Thumbs.db
+
+# Config files that shouldn't be formatted
+*.min.js
+*.min.css

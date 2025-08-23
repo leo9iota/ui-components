@@ -1,0 +1,79 @@
+{
+    "printWidth": 90,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "quoteProps": "as-needed",
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "endOfLine": "crlf",
+    "plugins": ["prettier-plugin-svelte"],
+    "overrides": [
+        {
+            "files": ["*.yaml", "*.yml"],
+            "options": {
+                "tabWidth": 2,
+                "printWidth": 80
+            }
+        },
+        {
+            "files": [
+                "*.js",
+                "*.mjs",
+                "*.cjs",
+                "*.ts",
+                "*.mts",
+                "*.cts",
+                "*.json",
+                "*.jsonc",
+                "*.css",
+                "*.scss",
+                "*.less"
+            ],
+            "options": {
+                "tabWidth": 4,
+                "printWidth": 80
+            }
+        },
+        {
+            "files": ["*.jsx", "*.tsx"],
+            "options": {
+                "tabWidth": 2,
+                "printWidth": 80,
+                "jsxSingleQuote": true,
+                "bracketSameLine": false
+            }
+        },
+        {
+            "files": ["*.vue"],
+            "options": {
+                "tabWidth": 2,
+                "printWidth": 80,
+                "singleQuote": true,
+                "semi": true,
+                "bracketSpacing": true,
+                "htmlWhitespaceSensitivity": "ignore",
+                "vueIndentScriptAndStyle": true
+            }
+        },
+        {
+            "files": ["*.svelte"],
+            "options": {
+                "tabWidth": 2,
+                "printWidth": 80,
+                "singleQuote": true,
+                "semi": true,
+                "bracketSpacing": true,
+                "htmlWhitespaceSensitivity": "ignore",
+                "svelteStrictMode": false,
+                "svelteBracketNewLine": false,
+                "svelteAllowShorthand": true,
+                "svelteIndentScriptAndStyle": true
+            }
+        }
+    ]
+}
