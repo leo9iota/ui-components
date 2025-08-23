@@ -1,4 +1,4 @@
-import SocialLogin from './components/SocialLogin/SocialLogin';
+import { SocialLogin } from './components/SocialLogin/SocialLogin';
 
 function App() {
   const handleLogin = (email: string) => {
@@ -6,9 +6,7 @@ function App() {
     alert(`Login attempted with: ${email}`);
   };
 
-  return (
-    <SocialLogin onSubmit={handleLogin} />
-  );
+  return <SocialLogin onSubmit={handleLogin} />;
 }
 
 export default App;

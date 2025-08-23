@@ -9,7 +9,7 @@ export interface SocialLoginProps {
   className?: string;
 }
 
-const SocialLogin: React.FC<SocialLoginProps> = ({
+export const SocialLogin: React.FC<SocialLoginProps> = ({
   title = 'Already working together?',
   description = 'Login to your account and connect with your teammates!',
   placeholder = 'Enter your email address',
@@ -105,5 +105,3 @@ const SocialLogin: React.FC<SocialLoginProps> = ({
     </div>
   );
 };
-
-export default SocialLogin;

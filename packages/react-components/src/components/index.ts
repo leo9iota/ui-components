@@ -1,1 +1,1 @@
-export { default, type SocialLoginProps } from './SocialLogin/SocialLogin';
+export { SocialLogin, type SocialLoginProps } from './SocialLogin/SocialLogin';
