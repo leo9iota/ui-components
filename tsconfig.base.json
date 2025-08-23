@@ -13,9 +13,9 @@
         "forceConsistentCasingInFileNames": true,
         "baseUrl": ".",
         "paths": {
-            "@leo9iota/ui-react": ["packages/ui-react"],
-            "@leo9iota/ui-svelte": ["packages/ui-svelte"],
-            "@leo9iota/ui-vue": ["packages/ui-vue"]
+            "@leo9iota/react-components": ["packages/react-components"],
+            "@leo9iota/svelte-components": ["packages/svelte-components"],
+            "@leo9iota/vue-components": ["packages/vue-components"]
         }
     }
 }
