@@ -11,8 +11,12 @@
         "packages/vue/*"
     ],
     "scripts": {
-        "prepare": "husky",
-        "dev": "turbo run dev --filter=playground"
+        "dev": "turbo run dev --parallel",
+        "build": "turbo run build",
+        "typecheck": "turbo run typecheck",
+        "lint": "turbo run lint",
+        "clean": "turbo run clean",
+        "prepare": "husky"
     },
     "dependencies": {},
     "devDependencies": {
