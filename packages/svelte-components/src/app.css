@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Custom styles to match original design */
+body {
+  font-family: 'Nokora', sans-serif;
+  margin: 0;
+}
