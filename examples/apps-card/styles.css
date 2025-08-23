@@ -1,0 +1,206 @@
+/* -------------------- */
+/* Debug                */
+/* -------------------- */
+/* *,
+*::before,
+*::after {
+    outline: 1px solid lime;
+    background: hsl(0 100% 50% / 0.2);
+} */
+
+/* -------------------- */
+/* Global               */
+/* -------------------- */
+:root {
+    --background-color-1: #8170b3;
+    --background-color-2: #3b4d7b;
+
+    --font-color-1: #273949;
+    --font-color-2: #646e7a;
+    --font-color-3: #f2fbff;
+
+    --button-color-1: #6780ff;
+    --button-color-2: #7fd422;
+
+    --separator-color: #f4f4f4;
+
+    --shadow-color: rgba(103, 128, 255, 0.25);
+}
+
+body {
+    background: linear-gradient(
+        to bottom right,
+        var(--background-color-1),
+        var(--background-color-2)
+    );
+    background-attachment: fixed; /* Ensures background stays fixed */
+    background-size: cover; /* Ensures background covers entire element */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+}
+
+h1 {
+    
+}
+
+/* -------------------- */
+/* Fonts                */
+/* -------------------- */
+.font-inter-main {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-inter-secondary {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -------------------- */
+/* Global Container     */
+/* -------------------- */
+.global-container {
+}
+
+/* -------------------- */
+/* App Card Container   */
+/* -------------------- */
+.app-card-container {
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------- */
+/* App Card             */
+/* -------------------- */
+.app-card {
+    position: absolute; /* Set position absolute */
+    width: 400px; /* Set width of box */
+    height: 480px; /* Set height of box */
+    background-color: white; /* White background */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be truly centered */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+    padding: 20px; /* Add some padding inside the box */
+    border-radius: 5px; /* Add slightly rounded corners */
+}
+
+/* -------------------- */
+/* Font Sizes           */
+/* -------------------- */
+.app-card h1.font-inter-main {
+    color: var(--font-color-1);
+    font-size: 1.75em;
+}
+
+.app-card .app-icon h2 {
+    color: var(--font-color-2);
+    font-size: 0.9em;
+}
+
+/* -------------------- */
+/* App Cards            */
+/* -------------------- */
+.separator {
+    background-color: var(--separator-color);
+    height: 3px; /* Separator thinness */
+    width: 100%; /* Use whole with of container */
+    border-radius: 1px; /* Round borders of separator */
+    margin: 0; /* Add vertical margin */
+    margin: 15px 0;
+}
+
+.app-container {
+}
+
+.app-icon {
+}
+
+/* -------------------- */
+/* Main Button          */
+/* -------------------- */
+.main-button-container {
+}
+
+.main-button {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--button-color-1); /* Set button color */
+    color: var(--font-color-3); /* Set font color */
+    width: 100%; /* Set with to whole width of parent container */
+    border-radius: 5px; /* Set border radius */
+    padding: 15px 20px; /* Add some padding */
+    font-size: 16px; /* Set a specific font size */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.main-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------- */
+/* Apps Card            */
+/* -------------------- */
+.app-flex {
+    position: relative; /* Add this to contain absolute positioning */
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden; /* Change from overflow-y: auto to hidden */
+}
+
+.app-icon {
+    position: relative; /* Add this for positioning the pseudo-element */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Ensure icon is above the hover effect */
+    padding: 10px; /* Add padding to give space for the hover effect */
+}
+
+.app-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 25px var(--shadow-color);
+    background-color: white; /* Light blue, matching button color */
+    transform: translate(-50%, -50%);
+    /* transition: width 0.1s ease, height 0.3s ease; */
+    z-index: -1; /* Place behind the icon content */
+    border-radius: 10px; /* Rounded corners for the hover effect */
+}
+
+.app-icon:hover::before {
+    width: calc(100% - 20px); /* Subtract padding to keep within bounds */
+    height: calc(100% - 20px); /* Subtract padding to keep within bounds */
+}
+
+.app-icon img {
+    width: 60px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Add smooth transition for icon */
+}
+
+/* .app-icon:hover img {
+    transform: scale(1.1); Slightly enlarge icon on hover
+} */
+
+.app-icon h2 {
+    margin: 0;
+    font-size: 0.8em;
+}
