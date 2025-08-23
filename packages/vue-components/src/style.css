@@ -1,0 +1,42 @@
+/* -------------------- */
+/* Global CSS Variables*/
+/* -------------------- */
+:root {
+  --background-color-1: #8170b3;
+  --background-color-2: #3b4d7b;
+  --font-color-1: #273949;
+  --font-color-2: #646e7a;
+  --font-color-3: #f2fbff;
+  --button-color-1: #6780ff;
+  --button-color-2: #7fd422;
+  --separator-color: #f4f4f4;
+  --shadow-color: rgba(103, 128, 255, 0.25);
+}
+
+/* -------------------- */
+/* Global Styles        */
+/* -------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    to bottom right,
+    var(--background-color-1),
+    var(--background-color-2)
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
