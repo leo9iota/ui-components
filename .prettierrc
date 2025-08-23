@@ -14,10 +14,9 @@
     "plugins": ["prettier-plugin-svelte"],
     "overrides": [
         {
-            "files": ["*.yaml", "*.yml"],
+            "files": ["*.yaml", "*.yml", "*.html"],
             "options": {
-                "tabWidth": 2,
-                "printWidth": 80
+                "tabWidth": 2
             }
         },
         {
