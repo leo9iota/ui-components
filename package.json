@@ -5,10 +5,7 @@
     "workspaces": [
         "apps/*",
         "packages/*",
-        "packages/components/*",
-        "packages/react/*",
-        "packages/svelte/*",
-        "packages/vue/*"
+        "packages/components/*"
     ],
     "scripts": {
         "dev": "turbo run dev --parallel",
