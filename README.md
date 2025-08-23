@@ -1,3 +1,3 @@
 # UI Components
 
-Modular UI components that can be integrated into larger projects.
+Small UI components that can be integrated into larger projects.
